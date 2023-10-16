@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: white;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 20px #85219C;
+    transition: 0.5s;
+}
+
+.container:hover {
+    box-shadow: 0px 1px 40px #85219C;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profile-initial {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #85219C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.profile-name{
+    text-align:left;
+    margin-left: 18px;
+}
+
+.batch {
+    text-align: left;
+    margin-left: 18px;
+}
+
+.container form {
+    position: relative;
+    min-height: 440px;
+}
+
+.container form h3 {
+    margin-bottom: 10px;
+}
+
+.container form .block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.inputBox {
+    width: calc(100% / 2 - 25px);
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputBox label {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.inputBox input {
+    height: 40px;
+    padding: 0 15px;
+    margin: 8px 0;
+    outline: none;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+input:hover {
+    border: 2px solid black;
+}
+
+#address {
+  font-style: 16px;
+  font-weight: 600;
+}
+
+textarea {
+  width: calc(100% / 1);
+  resize: none;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 400;
+  border: 1px solid darkgray;
+  margin-top: 8px;
+  padding: 5px 15px;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+textarea:hover {
+    border: 2px solid black;
+}
+
+
+@media (max-width: 768px) {
+    .inputBox {
+        width: calc(100% / 2 - 20px);
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        border-radius: 0;
+    }
+    .inputBox {
+        width: calc(100% / 1);
+    }
+}
