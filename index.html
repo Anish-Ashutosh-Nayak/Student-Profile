@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="profile-container">
+          <div class="profile-initial" id="profile-initial">S
+          </div>
+          <div class="profile-image" id="profile-img" alt="Profile Image">
+          </div>
+          <div><h2 class="profile-name" id="profile-name">Sangita Pradhan</h2>
+            <h4 class="batch" id="batch">BSc. CS(H) - 3rd Sem</h4>
+          </div>
+        </div>
+        <form action="#">
+            <h3>Student Details</h3>
+            <div class="block">
+                <div class="inputBox">
+                    <label for="name">Full Name</label>
+                    <input type="text">
+                </div>
+                <div class="inputBox">
+                    <label for="roll">Roll No./ID</label>
+                    <input type="text">
+                </div>
+                <div class="inputBox">
+                    <label for="course">Course</label>
+                    <input type="text">
+                </div>
+                <div class="inputBox">
+                    <label for="semester">Semester</label>
+                    <input type="text">
+                </div>
+                <div class="inputBox">
+                    <label for="mail">Email</label>
+                    <input type="email">
+                </div>
+                <div class="inputBox">
+                    <label for="phone">Phone No.</label>
+                    <input type="tel">
+                </div>
+                <label id="address" for="address">Address</label>
+                <textarea name="address" id="" cols="20" rows="4"></textarea>
+            </div>
+            
+        </form>
+    </div>
+    
+    <script>
+      const profileImage = document.getElementById('profile-img');
+      const profileName = document.getElementById('profile-name');
+      const profileInitial = document.getElementById('profile-initial');
+    
+      const profileData = {
+        name: 'Sangita Pradhan',
+        batch: 'BSC CS(H)-3rd Sem',
+      }
+    
+      profileName.textContent = profileData.name;
+    
+    
+      if (profileData.image) {
+        profileImage.src = profileData.image;
+        profileInitial.style.display = 'none';
+      } else {
+        profileInitial.textContent = profileData.name.charAt(0);
+        profileImage.style.display = 'none';
+      }
+    </script>
+</body>
+
+</html>
